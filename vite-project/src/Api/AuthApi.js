@@ -4,25 +4,31 @@ import conf from "../Conf/Conf";
 export class AuthApi {
 
     config = {
-        method : "",
-        maxBodyLength : Infinity,
-        url:url,
-        withCredentials : true
+        method: "",
+        maxBodyLength: Infinity,
+        url: url,
+        withCredentials: true
     }
 
-    login = async(credential)=>{
-         this.config.method = 'post'
-         this.config.url = `${this.config.url}/api/auth/login`
-         
-    
+    login = async (credential) => {
+        this.config.method = 'post'
+        this.config.url = `${this.config.url}/api/auth/login`
+
+
     }
-    logout = async()=>{
+    logout = async () => {
         // remove token from local storage
     }
-    
-    GetUserPost = async()=>{
+
+    GetUserPost = async () => {
         // get user post
     }
+
+    EditUser = async () => {
+         // edit user details and coverImage and avatar
+         
+    }
+
 
 }
 

@@ -1,7 +1,9 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import { Home, Profile, SignIn, SignUp } from './Pages/index';
+import { AuthLayout } from './Components/index';
+import ErrorPage from './Pages/ErrorPage';
 
 // Define loader functions if needed
 const homeLoader = async () => {
@@ -18,24 +20,45 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true, // This makes it the index route
-                element: <Home />,
+                element: (
+                    <AuthLayout authentication={true}>
+                        <Home />
+                    </AuthLayout>
+
+                ),
                 loader: homeLoader
             },
             {
                 path: 'profile',
-                element: <Profile />,
+                element: (
+                    <AuthLayout authentication={true}>
+                        <Profile />
+                    </AuthLayout>
+
+                ),
                 loader: profileLoader
             },
             {
                 path: 'signin',
-                element: <SignIn />
+                element: (
+                    <AuthLayout authentication={false}>
+                        <SignIn />
+                    </AuthLayout>
+
+                ),
             },
             {
                 path: 'signup',
-                element: <SignUp />
+                element: (
+                    <AuthLayout authentication={false}>
+                        <SignUp />
+                    </AuthLayout>
+
+                ),
             }
         ]
     }
