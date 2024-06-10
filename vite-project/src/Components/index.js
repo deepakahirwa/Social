@@ -1,3 +1,3 @@
 import AuthLayout from "./AuthLayout";
-
-export {AuthLayout};
+import Input from "./Input";
+export {AuthLayout,Input};
