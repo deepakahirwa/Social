@@ -1,9 +1,14 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, redirect } from 'react-router-dom';
 import App from './App';
 import { Home, Profile, SignIn, SignUp } from './Pages/index';
 import { AuthLayout } from './Components/index';
 import ErrorPage from './Pages/ErrorPage';
+
+import authService from './Api/AuthApi.js';
+
+import Store from './Store/Store';
+import { login } from './Store/AuthSlice';
 
 // Define loader functions if needed
 const homeLoader = async () => {
@@ -12,8 +17,23 @@ const homeLoader = async () => {
 };
 
 const profileLoader = async () => {
-    // Fetch data for Profile page
-    return {};
+    try {
+        const response = await authService.getUser();
+        if (response) {
+            const UserData = response[0];
+            const UserPost = response[1];
+            console.log('User Data:', UserData);
+            console.log('User Post:', UserPost);
+            Store.dispatch(login({ UserData, UserPost }));
+            return {};
+        } else {
+            console.error('No response from authService.getUser()');
+            return redirect('/signin');
+        }
+    } catch (error) {
+        console.error('Error in profileLoader:', error);
+        return redirect('/signin');
+    }
 };
 
 const router = createBrowserRouter([
@@ -23,24 +43,22 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
-                index: true, // This makes it the index route
+                index: true,
                 element: (
-                    <AuthLayout authentication={true}>
+                    <AuthLayout authentication={false}>
                         <Home />
                     </AuthLayout>
-
                 ),
-                loader: homeLoader
+                loader: profileLoader,
             },
             {
                 path: 'profile',
                 element: (
-                    <AuthLayout authentication={true}>
+                    <AuthLayout authentication={false}>
                         <Profile />
                     </AuthLayout>
-
                 ),
-                loader: profileLoader
+                loader: profileLoader,
             },
             {
                 path: 'signin',
@@ -48,7 +66,6 @@ const router = createBrowserRouter([
                     <AuthLayout authentication={false}>
                         <SignIn />
                     </AuthLayout>
-
                 ),
             },
             {
@@ -57,11 +74,10 @@ const router = createBrowserRouter([
                     <AuthLayout authentication={false}>
                         <SignUp />
                     </AuthLayout>
-
                 ),
-            }
-        ]
-    }
+            },
+        ],
+    },
 ]);
 
 export default router;

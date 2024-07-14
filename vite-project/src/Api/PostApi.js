@@ -2,7 +2,7 @@ import conf from '../Conf/Conf'
 
 
 export class PostApi{
-
+        
 }
 
 

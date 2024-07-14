@@ -9,7 +9,7 @@ function SignUp() {
   };
 
   return (
-    <div className="w-80 min-h-96 rounded-lg p-6 border-black border-2 md:w-96 md:min-h-80">
+    <div className="w-80 min-h-96 rounded-lg p-6 bg-blue-50 md:w-96 md:min-h-80">
       <div className="flex flex-col items-center">
         <form action="submit" onSubmit={handleSubmit(signUp)} className="w-full">
           <h1 className="text-3xl font-bold text-center mb-6 md:text-2xl md:mb-4">Sign Up</h1>

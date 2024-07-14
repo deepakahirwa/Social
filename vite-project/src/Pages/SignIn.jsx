@@ -1,17 +1,43 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 import { Input } from '../Components/index';
+import authService from '../Api/AuthApi';
+import { useNavigate } from 'react-router-dom';
+ 
+// store work for the storing the user post and user info
+import { useDispatch, useSelector } from "react-redux";
+import { login as Login } from '../Store/AuthSlice';
+
+
+
 function SignIn() {
 
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+
+  // store work
+  const dispatch = useDispatch();
+
   const login = async (data) => {
-    console.log(data);
+
+    try {
+      const response = await authService.login(data);
+      if (response) {
+        console.log(response);
+        const UserData = response[0];
+        const UserPost = response[1];
+        dispatch(Login({ UserData, UserPost }));
+        navigate('/profile')
+      }
+    } catch (error) {
+        navigate('/signin')
+    }
   }
   return (
 
-    <>
+    < >
 
-      <div className="w-80 min-h-96 rounded-lg p-6 border-black border-2 md:w-96 md:min-h-80">
+      <div className=" block w-80 min-h-96  rounded-lg p-6  md:w-96 md:min-h-80 bg-blue-50">
         <div className="flex flex-col items-center">
           <form action="submit" onSubmit={handleSubmit(login)} className="w-full">
             <h1 className="text-3xl font-bold text-center mb-6 md:text-2xl md:mb-4">Sign In</h1>
@@ -36,7 +62,7 @@ function SignIn() {
 
 
               <Input
-                laberClass= {"block text-lg font-semibold mb-2 md:text-base "}
+                laberClass={"block text-lg font-semibold mb-2 md:text-base "}
                 label={"Password"}
                 type="password"
                 placeholder="Enter the Paasword"
@@ -50,6 +76,8 @@ function SignIn() {
           </form>
         </div>
       </div>
+
+
 
 
 

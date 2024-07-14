@@ -4,7 +4,12 @@ import { Input } from '../Components'
 function OtpVerify() {
   return (
     <div>
-        <Input/>
+        <Input
+         placeholder = "enter the OTP"
+         laber = "Enter OPT"
+         className={"p-1 bg-slate-50"}
+          
+        />
     </div>
   )
 }

@@ -12,7 +12,7 @@ export const AuthLayout = ({ children, authentication = true }) => {
         if (authentication && authStatus) {
             setLoader(true);
         }
-        else if (!authentication) {
+        else if (!authentication){
             setLoader(false);
         }
         else {
