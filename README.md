@@ -19,11 +19,9 @@
 **Authentication:** `JSON Web Tokens (JWT)`  
 **Styling:** `CSS,TailwindCSS, Material-UI` 
 ## Project Structure
-`The project is divided into two main parts: the backend and the frontend.`
+`The project is divided into two main parts:  backend and  frontend.`
 
-- Additional browser support
 
-- Add more integrations
 
 
 ### **Backend**
