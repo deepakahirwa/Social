@@ -1,94 +1,50 @@
+import { Home } from '@mui/icons-material'
 import React from 'react'
 
 function Footer() {
   return (
-
-
     <footer class="bg-white dark:bg-gray-900">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
-              <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div class="mb-6 sm:mb-0">
+            <a href="https://yourwebsite.com/" class="flex items-center">
+              {/* <img src={LogoDev} class="h-8 mr-3" alt="Logo" /> */}
+              <Home/>
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Facebook</span>
             </a>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-                </li>
-                <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
-                </li>
-                <li>
-                  <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-          </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd" />
+          <div class="flex space-x-6">
+            <a href="https://facebook.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22.675 0H1.326C.593 0 0 .592 0 1.326v21.348C0 23.407.593 24 1.326 24h11.494V14.708h-3.12v-3.62h3.12V8.413c0-3.066 1.87-4.742 4.6-4.742 1.312 0 2.438.098 2.762.142v3.2l-1.894.001c-1.488 0-1.777.708-1.777 1.746v2.288h3.555l-.464 3.62h-3.09V24h6.065C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z" />
               </svg>
               <span class="sr-only">Facebook page</span>
             </a>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
-              </svg>
-              <span class="sr-only">Discord community</span>
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd" />
+            <a href="https://twitter.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 4.557a9.825 9.825 0 0 1-2.825.775 4.948 4.948 0 0 0 2.163-2.724 9.866 9.866 0 0 1-3.127 1.195 4.933 4.933 0 0 0-8.398 4.49A14.01 14.01 0 0 1 1.67 3.149a4.934 4.934 0 0 0 1.527 6.573 4.913 4.913 0 0 1-2.23-.616c-.054 2.28 1.582 4.415 3.946 4.89a4.92 4.92 0 0 1-2.224.085 4.935 4.935 0 0 0 4.604 3.417 9.874 9.874 0 0 1-6.1 2.105c-.396 0-.79-.023-1.174-.068A13.978 13.978 0 0 0 7.548 21c9.142 0 14.307-7.721 14.307-14.416 0-.219-.005-.438-.015-.655A10.243 10.243 0 0 0 24 4.557z" />
               </svg>
               <span class="sr-only">Twitter page</span>
             </a>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd" />
+            <a href="https://instagram.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.964.24 2.415.413a4.902 4.902 0 0 1 1.789 1.053 4.902 4.902 0 0 1 1.053 1.789c.173.451.359 1.245.413 2.415.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.964-.413 2.415a4.902 4.902 0 0 1-1.053 1.789 4.902 4.902 0 0 1-1.789 1.053c-.451.173-1.245.359-2.415.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.964-.24-2.415-.413a4.902 4.902 0 0 1-1.789-1.053 4.902 4.902 0 0 1-1.053-1.789c-.173-.451-.359-1.245-.413-2.415-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.24-1.964.413-2.415a4.902 4.902 0 0 1 1.053-1.789 4.902 4.902 0 0 1 1.789-1.053c.451-.173 1.245-.359 2.415-.413 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.756 0 8.34.013 7.052.073 5.683.134 4.608.323 3.738.588 2.861.856 2.118 1.241 1.424 1.936.731 2.63.347 3.374.078 4.262.011 5.045 0 5.646 0 12s.012 6.955.078 7.738c.269.888.653 1.632 1.346 2.326.693.694 1.437 1.077 2.325 1.346.783.066 1.384.078 7.738.078s6.955-.012 7.738-.078c.888-.269 1.632-.653 2.326-1.346.694-.693 1.077-1.437 1.346-2.325.066-.783.078-1.384.078-7.738s-.012-6.955-.078-7.738c-.269-.888-.653-1.632-1.346-2.326-.694-.693-1.437-1.077-2.325-1.346-.783-.066-1.384-.078-7.738-.078z" />
+                <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.999 3.999 3.999 0 0 1 0 7.999zm6.406-11.845a1.44 1.44 0 1 0 0-2.882 1.44 1.44 0 0 0 0 2.882z" />
               </svg>
-              <span class="sr-only">GitHub account</span>
+              <span class="sr-only">Instagram page</span>
             </a>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd" />
+            <a href="https://linkedin.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.98 3a2.1 2.1 0 1 0 0 4.201A2.1 2.1 0 0 0 4.98 3zm.037 16.293h-4V8.32h4v10.973zm7.618-10.973h-3.777v1.502h.053c.523-.992 1.8-1.501 3.054-1.501 3.1 0 3.676 2.031 3.676 4.672v5.3h-4v-4.706c0-1.125-.023-2.576-1.569-2.576-1.57 0-1.81 1.229-1.81 2.497v4.785h-4V8.32h3.822v1.34h-.054c.527-.998 1.8-1.54 3.056-1.54 2.927 0 3.676 1.93 3.676 4.444v5.279h-.002z" />
               </svg>
-              <span class="sr-only">Dribbble account</span>
+              <span class="sr-only">LinkedIn page</span>
             </a>
           </div>
         </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/" class="hover:underline">Minstagram™</a>. All Rights Reserved.</span>
       </div>
     </footer>
-
   )
 }
 
